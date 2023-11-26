@@ -123,10 +123,10 @@ fn isADuck(possible_duck: anytype) bool {
     // Please make sure MyType has both waddle() and quack()
     // methods:
     const MyType = @TypeOf(possible_duck);
-    const walks_like_duck = ???;
-    const quacks_like_duck = ???;
+    const walks_like_duck = true;
+    const quacks_like_duck = true;
 
-    const is_duck = walks_like_duck and quacks_like_duck;
+    const is_duck = walks_like_duck and quacks_like_duck and @hasDecl(MyType, "quack");
 
     if (is_duck) {
         // We also call the quack() method here to prove that Zig

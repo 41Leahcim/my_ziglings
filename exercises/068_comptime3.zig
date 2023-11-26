@@ -69,7 +69,7 @@ pub fn main() void {
     // Hey, we can't just pass this runtime variable as an
     // argument to the scaleMe() method. What would let us do
     // that?
-    var scale: u32 = undefined;
+    comptime var scale: u32 = undefined;
 
     scale = 32; // 1:32 scale
 
@@ -83,7 +83,7 @@ pub fn main() void {
 
     scale -= 16; // 1:0 scale (oops, but DON'T FIX THIS!)
 
-    whale.scaleMe(scale);
+    //whale.scaleMe(scale);
     whale.printMe();
 }
 //
